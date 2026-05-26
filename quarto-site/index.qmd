@@ -1,0 +1,17 @@
+---
+title: "Welcome"
+---
+
+## Hello, World!
+
+This is a simple website built with [Quarto](https://quarto.org) and deployed via GitHub Pages.
+
+### Getting Started
+
+Edit this file (`index.qmd`) to update the home page. Add new `.qmd` files and list them in `_quarto.yml` to create more pages.
+
+### Features
+
+- Write content in Markdown or R/Python code blocks
+- Built-in syntax highlighting
+- Responsive layout via Bootstrap
