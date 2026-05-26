@@ -2,3 +2,173 @@
 body {
   font-family: system-ui, sans-serif;
 }
+
+:root {
+  --bg: #f8f6f1;
+  --card: #ffffff;
+  --accent: #2d6a4f;
+  --accent-light: #d8f3dc;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.hero-buttons button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  box-shadow: var(--shadow);
+}
+
+.hero-buttons button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+#aventuras-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.aventura-card {
+  background: var(--card);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.aventura-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.emoji {
+  font-size: 2rem;
+}
+
+.categoria {
+  color: var(--muted);
+  margin: 0;
+}
+
+.aventura-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.aventura-btn {
+  background: var(--accent-light);
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.aventura-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+
+#calendario {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.evento-calendario {
+  background: white;
+  border-radius: 18px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.fecha-box {
+  background: var(--accent);
+  color: white;
+  border-radius: 14px;
+  min-width: 70px;
+  text-align: center;
+  padding: 0.7rem;
+}
+
+.dia {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.mes {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.random-card {
+  background: white;
+  border-left: 6px solid var(--accent);
+  padding: 1.5rem;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  margin: 2rem 0;
+}
+
+.random-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .evento-calendario {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

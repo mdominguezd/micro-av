@@ -14,17 +14,31 @@
     "text": "About This Site\nAdd your own content here — who you are, what the project is, or anything else you’d like to share."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome",
-    "section": "",
-    "text": "This is a simple website built with Quarto and deployed via GitHub Pages.\n\n\nEdit this file (index.qmd) to update the home page. Add new .qmd files and list them in _quarto.yml to create more pages.\n\n\n\n\nWrite content in Markdown or R/Python code blocks\nBuilt-in syntax highlighting\nResponsive layout via Bootstrap"
+    "objectID": "about.html#hola",
+    "href": "about.html#hola",
+    "title": "About",
+    "section": "hola",
+    "text": "hola"
   },
   {
-    "objectID": "index.html#hello-world",
-    "href": "index.html#hello-world",
-    "title": "Welcome",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "🌍 Microaventuras en Arnhem",
     "section": "",
-    "text": "This is a simple website built with Quarto and deployed via GitHub Pages.\n\n\nEdit this file (index.qmd) to update the home page. Add new .qmd files and list them in _quarto.yml to create more pages.\n\n\n\n\nWrite content in Markdown or R/Python code blocks\nBuilt-in syntax highlighting\nResponsive layout via Bootstrap"
+    "text": "Pequeños planes, escapadas urbanas y aventuras espontáneas para disfrutar Arnhem y sus alrededores."
+  },
+  {
+    "objectID": "index.html#todas-las-microaventuras",
+    "href": "index.html#todas-las-microaventuras",
+    "title": "🌍 Microaventuras en Arnhem",
+    "section": "✨ Todas las microaventuras",
+    "text": "✨ Todas las microaventuras"
+  },
+  {
+    "objectID": "index.html#calendario-de-eventos",
+    "href": "index.html#calendario-de-eventos",
+    "title": "🌍 Microaventuras en Arnhem",
+    "section": "📅 Calendario de eventos",
+    "text": "📅 Calendario de eventos"
   }
 ]
