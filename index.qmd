@@ -1,5 +1,5 @@
 ---
-title: " 🌍 Microaventuras en Arnhem"
+title: " 🌍 Microaventuras en Narniam"
 format:
   html:
     css: styles.css
@@ -16,6 +16,33 @@ const aventuras = [
     emoji: "🏙️",
     descripcion: "Disfruta una vista increíble de Arnhem desde los famosos balcones de cristal de la iglesia Eusebius.",
     link: "https://eusebius.nl/?_ga=2.233117084.36906448.1779814710-2086036264.1779814710&_gl=1*eed4gp*_gcl_au*MTg0OTc1Nzk0MS4xNzc5ODE0NzA5*_ga*MjA4NjAzNjI2NC4xNzc5ODE0NzEw*_ga_XGD5B0N86H*czE3Nzk4MTQ3MDkkbzEkZzAkdDE3Nzk4MTQ3MDkkajYwJGwwJGgw"
+  },
+  {
+    titulo: "Seguir la Eurovelo hacia Alemania",
+    categoria: "Bici",
+    fecha: "",
+    lugar: "Arnhem",
+    emoji: "🚲",
+    descripcion: "Sigue la Eurovelo 15 en su ruta por el Rhine hacia Alemania",
+    link: "https://en.eurovelo.com/ev15"
+  },
+  {
+    titulo: "Vino y quesos en Stadsblokken-Meinerswijk",
+    categoria: "Paseo",
+    fecha: "",
+    lugar: "Arnhem",
+    emoji: "🍷🧀",
+    descripcion: "Paseo por el Uiterwaarden de Arnhem con vino y una rica tabla de quesos.",
+    link: "https://www.stadsblokken-meinerswijk.org/"
+  },
+  {
+    titulo: "Kayaking",
+    categoria: "Paseo",
+    fecha: "",
+    lugar: "Arnhem",
+    emoji: "🚣",
+    descripcion: "Paseo cerca de Arnhem con Kayak rentados",
+    link: "https://lingevaart.nl/watersport/kajak-huren/"
   },
   {
     titulo: "Co(te)lette en Musis",
