@@ -1,17 +1,160 @@
 ---
-title: "Welcome"
+title: " 🌍 Microaventuras en Arnhem"
+format:
+  html:
+    css: styles.css
+    toc: false
 ---
 
-## Hello, World!
+<script>
+const aventuras = [
+  {
+    titulo: "Subir a los balcones de cristal de la Eusebiuskerk",
+    categoria: "Mirador urbano",
+    fecha: "",
+    lugar: "Arnhem",
+    emoji: "🏙️",
+    descripcion: "Disfruta una vista increíble de Arnhem desde los famosos balcones de cristal de la iglesia Eusebius.",
+    link: "https://eusebius.nl/?_ga=2.233117084.36906448.1779814710-2086036264.1779814710&_gl=1*eed4gp*_gcl_au*MTg0OTc1Nzk0MS4xNzc5ODE0NzA5*_ga*MjA4NjAzNjI2NC4xNzc5ODE0NzEw*_ga_XGD5B0N86H*czE3Nzk4MTQ3MDkkbzEkZzAkdDE3Nzk4MTQ3MDkkajYwJGwwJGgw"
+  },
+  {
+    titulo: "Co(te)lette en Musis",
+    categoria: "Teatro / Show",
+    fecha: "2026-05-28",
+    lugar: "Musis Arnhem",
+    emoji: "🎭",
+    descripcion: "Una experiencia escénica moderna y divertida en uno de los teatros más bonitos de Arnhem.",
+    link: "https://www.musisenstadstheater.nl/nl/agenda/ward-ward-co-te-lette/9537"
+  },
+  {
+    titulo: "Femininomenon Pop Party",
+    categoria: "Fiesta",
+    fecha: "2026-05-30",
+    lugar: "Luxor Live",
+    emoji: "🎉",
+    descripcion: "Una noche pop llena de energía, música y baile en Luxor Live.",
+    link: "https://www.luxorlive.nl/agenda/femininomenon-3/"
+  },
+  {
+    titulo: "Picnic y caminata en Veluwezoom",
+    categoria: "Naturaleza",
+    fecha: "",
+    lugar: "Veluwezoom",
+    emoji: "🥾",
+    descripcion: "Explora senderos increíbles rodeados de bosque y colinas, ideal para llevar picnic.",
+    link: "https://www.natuurmonumenten.nl/natuurgebieden/nationaal-park-veluwezoom"
+  },
+  {
+    titulo: "Tarde de piscina en Klarenbeek",
+    categoria: "Verano",
+    fecha: "",
+    lugar: "Zwembad Klarenbeek",
+    emoji: "🏊",
+    descripcion: "Nada al aire libre y disfruta del sol en una de las piscinas más agradables de Arnhem.",
+    link: "https://www.zwembadklarenbeek.nl/?utm_source=zwemindex.nl"
+  }
+];
 
-This is a simple website built with [Quarto](https://quarto.org) and deployed via GitHub Pages.
+function renderAventuras() {
+  const container = document.getElementById('aventuras-container');
+  container.innerHTML = '';
 
-### Getting Started
+  aventuras.forEach((a, index) => {
+    const fechaTexto = a.fecha
+      ? new Date(a.fecha).toLocaleDateString('es-ES', {
+          day: 'numeric',
+          month: 'long'
+        })
+      : 'Disponible cualquier día';
 
-Edit this file (`index.qmd`) to update the home page. Add new `.qmd` files and list them in `_quarto.yml` to create more pages.
+    container.innerHTML += `
+      <div class="aventura-card">
+        <div class="aventura-header">
+          <span class="emoji">${a.emoji}</span>
+          <div>
+            <h3>${a.titulo}</h3>
+            <p class="categoria">${a.categoria}</p>
+          </div>
+        </div>
 
-### Features
+        <p>${a.descripcion}</p>
 
-- Write content in Markdown or R/Python code blocks
-- Built-in syntax highlighting
-- Responsive layout via Bootstrap
+        <div class="aventura-info">
+          <span>📍 ${a.lugar}</span>
+          <span>📅 ${fechaTexto}</span>
+        </div>
+
+        <a class="aventura-btn" href="${a.link}" target="_blank">
+          Ver más
+        </a>
+      </div>
+    `;
+  });
+}
+
+function renderCalendario() {
+  const calendario = document.getElementById('calendario');
+
+  const eventos = aventuras.filter(a => a.fecha !== '');
+
+  eventos.sort((a, b) => new Date(a.fecha) - new Date(b.fecha));
+
+  calendario.innerHTML = '';
+
+  eventos.forEach(evento => {
+    const fecha = new Date(evento.fecha);
+
+    calendario.innerHTML += `
+      <div class="evento-calendario">
+        <div class="fecha-box">
+          <span class="dia">${fecha.getDate()}</span>
+          <span class="mes">${fecha.toLocaleDateString('es-ES', { month: 'short' })}</span>
+        </div>
+
+        <div>
+          <h4>${evento.titulo}</h4>
+          <p>${evento.lugar}</p>
+        </div>
+      </div>
+    `;
+  });
+}
+
+function aventuraAleatoria() {
+  const random = aventuras[Math.floor(Math.random() * aventuras.length)];
+
+  const resultado = document.getElementById('aventura-random');
+
+  resultado.innerHTML = `
+    <div class="random-card">
+      <h3>${random.emoji} ${random.titulo}</h3>
+      <p>${random.descripcion}</p>
+      <a href="${random.link}" target="_blank">Quiero hacer esta aventura</a>
+    </div>
+  `;
+}
+
+window.onload = () => {
+  renderAventuras();
+  renderCalendario();
+};
+</script>
+
+
+Pequeños planes, escapadas urbanas y aventuras espontáneas para disfrutar Arnhem y sus alrededores.
+
+<div class="hero-buttons">
+  <button onclick="aventuraAleatoria()">
+    🎲 Elegir una microaventura al azar
+  </button>
+</div>
+
+<div id="aventura-random"></div>
+
+## ✨ Todas las microaventuras
+
+<div id="aventuras-container"></div>
+
+## 📅 Calendario de eventos
+
+<div id="calendario"></div>
